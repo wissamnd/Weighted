@@ -204,29 +204,29 @@ class WeightEntryDialogState extends State<WeightEntryDialog> {
     );
   }
 
-  _showWeightPicker(BuildContext context, DialogViewModel viewModel) {
-    showDialog<double>(
-      context: context,
-      builder: (context) =>
-      new NumberPickerDialog.decimal(
-        minValue: viewModel.unit == "kg"
-            ? MIN_KG_VALUE
-            : (MIN_KG_VALUE * KG_LBS_RATIO).toInt(),
-        maxValue: viewModel.unit == "kg"
-            ? MAX_KG_VALUE
-            : (MAX_KG_VALUE * KG_LBS_RATIO).toInt(),
-        initialDoubleValue: viewModel.weightToDisplay,
-        title: new Text("Enter your weight"),
-      ),
-    ).then((double value) {
-      if (value != null) {
-        if (viewModel.unit == "lbs") {
-          value = value / KG_LBS_RATIO;
-        }
-        viewModel.onEntryChanged(viewModel.weightEntry..weight = value);
-      }
-    });
-  }
+  // _showWeightPicker(BuildContext context, DialogViewModel viewModel) {
+  //   showDialog<double>(
+  //     context: context,
+  //     builder: (context) =>
+  //     new NumberPickerDialog.decimal(
+  //       minValue: viewModel.unit == "kg"
+  //           ? MIN_KG_VALUE
+  //           : (MIN_KG_VALUE * KG_LBS_RATIO).toInt(),
+  //       maxValue: viewModel.unit == "kg"
+  //           ? MAX_KG_VALUE
+  //           : (MAX_KG_VALUE * KG_LBS_RATIO).toInt(),
+  //       initialDoubleValue: viewModel.weightToDisplay,
+  //       title: new Text("Enter your weight"),
+  //     ),
+  //   ).then((double value) {
+  //     if (value != null) {
+  //       if (viewModel.unit == "lbs") {
+  //         value = value / KG_LBS_RATIO;
+  //       }
+  //       viewModel.onEntryChanged(viewModel.weightEntry..weight = value);
+  //     }
+  //   });
+  // }
 }
 
 class DateTimeItem extends StatelessWidget {

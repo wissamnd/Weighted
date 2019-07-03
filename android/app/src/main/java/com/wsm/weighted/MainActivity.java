@@ -1,4 +1,4 @@
-package com.wnd.weighted;
+package com.wsm.weighted;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

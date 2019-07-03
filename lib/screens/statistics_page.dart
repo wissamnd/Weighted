@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import '../logic/actions.dart';
 import '../logic/constants.dart';
 import '../logic/States/redux_state.dart';

@@ -7,7 +7,7 @@ import '../screens/history_page.dart';
 import '../screens/profile_page.dart';
 import '../screens/statistics_page.dart';
 import '../screens/weight_entry_dialog.dart';
-import '../screens/graph_page.dart';
+
 class MainPageViewModel {
   final double defaultWeight;
   final bool hasEntryBeenAdded;
